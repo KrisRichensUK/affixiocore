@@ -1,0 +1,15 @@
+{
+  "mock_secure_api": {
+    "url": "http://localhost:8001/user/{secure_code}",
+    "method": "GET",
+    "timeout": 5,
+    "retries": 3,
+    "auth_type": "none",
+    "response_mapping": {
+      "eligibility_score": "eligibility_score",
+      "risk_ratio": "risk_ratio", 
+      "stability_years": "stability_years",
+      "jurisdiction_verified": "jurisdiction_verified"
+    }
+  }
+}

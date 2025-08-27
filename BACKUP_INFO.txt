@@ -1,0 +1,14 @@
+BACKUP INFORMATION
+==================
+
+Original source files have been backed up to: /home/kris/Documents/beta/affixio-engine/backup_original
+
+To restore original files:
+1. Stop the application
+2. Copy files from /home/kris/Documents/beta/affixio-engine/backup_original back to /home/kris/Documents/beta/affixio-engine/src
+3. Remove .encrypted files
+4. Restart the application
+
+Master key location: /home/kris/Documents/beta/affixio-engine/.master_key
+
+WARNING: Keep the master key secure! Without it, the encrypted files cannot be decrypted.

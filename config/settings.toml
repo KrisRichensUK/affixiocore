@@ -1,0 +1,32 @@
+[server]
+host = "0.0.0.0"
+port = 8000
+debug = false
+
+[security]
+jwt_secret = "your-super-secret-jwt-key-that-is-at-least-32-characters-long"
+jwt_algorithm = "HS256"
+jwt_expiry_hours = 24
+
+[logging]
+level = "INFO"
+file = "affixio.log"
+max_size = "10MB"
+backup_count = 5
+
+[connectors]
+default_timeout = 30
+default_retries = 3
+circuit_breaker_failure_threshold = 5
+circuit_breaker_timeout = 60
+
+[performance]
+max_connections = 100
+keepalive_timeout = 30
+request_timeout = 60
+
+[monitoring]
+enable_metrics = true
+metrics_port = 9090
+health_check_interval = 30
+

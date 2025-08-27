@@ -1,0 +1,36 @@
+{
+  "rules": [
+    {
+      "name": "OnlineSafetyEligibility",
+      "description": "Online Safety Act compliant eligibility verification using secure codes",
+      "jurisdiction": "UK",
+      "conditions": {
+        "AND": [
+          {
+            "fact": "eligibility_score",
+            "operator": "GREATER_THAN_OR_EQUAL_TO",
+            "value": 650
+          },
+          {
+            "fact": "risk_ratio",
+            "operator": "LESS_THAN",
+            "value": 0.45
+          },
+          {
+            "fact": "stability_years",
+            "operator": "GREATER_THAN_OR_EQUAL_TO",
+            "value": 2
+          },
+          {
+            "fact": "jurisdiction_verified",
+            "operator": "EQUALS",
+            "value": true
+          }
+        ]
+      },
+      "action": "GRANT_YES",
+      "reason_pass": "All eligibility criteria met for Online Safety Act compliance",
+      "reason_fail": "One or more eligibility criteria not met"
+    }
+  ]
+}
